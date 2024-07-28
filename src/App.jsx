@@ -9,7 +9,7 @@ function App() {
   const sliderRef = useRef(null);
   const [imageCount, setImageCount] = useState(1);
   const images = [
-    'src/assets/react.svg',
+    'C:/Users/Adrian/Desktop/adrian/Programiranje i web dizajn/someReact/Personal-portfolio/src/assets/react.svg',
     'src/assets/js-brands-solid.svg',
     "src/assets/images/html5-brands.png",
     "src/assets/images/css3-alt-brands.png",
