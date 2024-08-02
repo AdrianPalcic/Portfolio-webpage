@@ -2,7 +2,7 @@
  function Body ({slider, left, right}) {
 
     const images = [
-        'src/assets/react.svg',
+        './Portfolio-webpage/src/assets/react.svg',
         'src/assets/js-brands-solid.svg',
         "src/assets/images/html5-brands.png",
         "src/assets/images/css3-alt-brands.png",
