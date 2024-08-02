@@ -1,12 +1,21 @@
  
+
+
+import Javascript from "../assets/js.svg";
+import Reacct from '../assets/react.svg';
+import Css3 from "../assets/images/css3.png";
+import Html from "../assets/images/html.png";
+import Git from "../assets/images/git.png";
+
+
  function Body ({slider, left, right}) {
 
     const images = [
-        'src/assets/react.svg',
-        'src/assets/js-brands-solid.svg',
-        "src/assets/images/html5-brands.png",
-        "src/assets/images/css3-alt-brands.png",
-        "src/assets/images/git-alt-brands (1).png",
+            Reacct,
+            Javascript,
+            Html,
+            Css3,
+            Git,
       ];
       
 
