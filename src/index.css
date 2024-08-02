@@ -2,69 +2,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
   background-color: black;
-  color:white;
+  color: white;
   font-family: 'Poppins', sans-serif;
 }
+
 .container-fluid {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px 0 20px;
-
-
 }
-
-.name-surname {
-  display: flex;
-  gap: 5px;
-  align-items: center; 
-  justify-content: center;
-  font-size: 1.2rem;
-}
-
 
 .navbar {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul {
-  display:flex;
-  gap:20px;
+  display: flex;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  margin: 0 15px;
+  margin-left: -100px;
 }
 
 .navbar li {
-  margin: 0 15px;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: ease-in;
 }
+
+.navbar a {
+  height: 100%;
+}
+
+.navbar li:hover {
+  background-color: hsl(0, 0%, 10%);
+  border-radius: 3px;
+}
+
+.name-surname {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
 .hr {
   width: 100%;
-  background-color:hsl(0, 0%, 20%);
+  background-color: hsl(0, 0%, 20%);
   height: 1px;
 }
 
 .seller {
-  height:90vh;
-  padding:30px;
-  display:flex;
-  justify-content:space-evenly;
+  height: 91.5vh;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
+
 .name {
   font-size: 4rem;
   color: hsl(300, 100%, 45%);
@@ -72,42 +89,224 @@ body {
   font-family: 'Anton', sans-serif;
 }
 
-
 .job-desc {
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
+
 .right {
-  position:relative;
-  top:40px;
-  display:flex;
+  position: relative;
+  top: 40px;
+  display: flex;
   align-items: center;
   gap: 5px;
 }
-.right button{
-  cursor:pointer;
-  margin:10px;
-  background-color:hsl(0, 0%, 20%);
-  color:white;
-  border:none;
+
+.right button {
+  cursor: pointer;
+  margin: 10px;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  border: none;
   border-radius: 50%;
 }
+
 .frame {
   height: 200px;
   width: 200px;
   overflow: hidden;
-
 }
-.slider{
+
+.slider {
   display: flex;
   transition: all 0.5s ease;
-
 }
 
 .slider .image {
-  flex: 1 0 100%; /* Flex-grow, flex-shrink, and flex-basis to take full space */
+  flex: 1 0 100%;
   width: 100%;
-  margin-right:50px;
+  margin-right: 50px;
   height: 100%;
   object-fit: cover;
-  
+}
+
+.light-dark {
+  padding-left: -20px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.change {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: -14px;
+  height: 100vh;
+  width: 260px;
+  z-index: 999;
+  background-color: hsla(0, 0%, 30%, 0.549);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar li:hover {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.hidden {
+  display: none;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  height: 91.5vh;   
+}
+
+.resume h1 {
+  font-size: 80px;
+}
+
+.resumeA {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  border: 1px solid hsl(0, 0%, 30%);
+  padding: 5px;
+  border-radius: 7px;
+}
+.resumeA:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+/* Dark Mode */
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark .header .name-surname {
+  color: white;
+}
+
+.dark .navbar li {
+  color: white;
+}
+
+.dark .hr {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.dark .right button {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+
+.dark .change {
+  text-decoration: none;
+  color: white;
+}
+
+.dark .resume h1 {
+  color: white;
+}
+
+.dark .resumeA {
+  color: white;
+}
+
+/* Light Mode */
+.light {
+  background-color: hsl(0, 0%, 80%);
+  color: black;
+}
+
+.light .header .name-surname {
+  color: black;
+}
+
+.light .navbar li {
+  color: black;
+}
+.light .navbar li:hover {
+    background-color: hsl(0, 0%, 70%);
+}
+
+.light .hr {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.light .right button {
+  background-color: hsl(0, 0%, 80%);
+  color: black;
+}
+
+.light .change {
+  text-decoration: none;
+  color: black;
+}
+
+.light .resume h1 {
+  color: black;
+}
+
+.light .resumeA {
+  color: black;
+}
+.light .resumeA:hover {
+    background-color: hsl(0, 0%, 50%);
+}
+
+@media (max-width: 920px) {
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .navbar {
+    justify-content: end;
+  }
+}
+
+@media (max-width: 780px) {
+  .seller {
+    flex-direction: column;
+  }
+  .name {
+    text-align: center;
+  }
+  .job-desc {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .seller {
+    overflow: hidden;
+    gap: 0;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .job-desc {
+    font-size: 1rem;
+  }
 }
