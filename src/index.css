@@ -195,6 +195,144 @@ body {
 .resumeA:hover {
     background-color: hsl(0, 0%, 10%);
 }
+.projects-body {
+  margin-top:20px;
+  height:91.5vh;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+.projects-body h1 {
+  font-size: 5em;
+}
+.searchbar {
+  margin-top:20px;
+  width: 80%;
+  height:45px;
+  border-radius: 10px;
+  background-color: transparent;
+  color:white;
+  font-size:20px;
+  padding:10px;
+  border:none;
+  outline: 1px solid hsl(0, 0%, 30%);
+}
+.searchbar:focus {
+  background-color: hsla(0, 0%, 10%, 0.6);
+}
+.projects-body .card-container {
+
+  padding: 20px 20px 20px 7%;
+  width: 90%;
+  margin-top: 20px;
+  display:flex;
+ 
+  flex-wrap:wrap;
+  gap:20px;
+  align-items: center;
+}
+
+
+.card {
+  padding:10px;
+  border: 2px solid hsl(0, 0%, 20%);
+  background-color: transparent;
+  color:white;
+  height:400px;
+  width:320px;
+  cursor:pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card-desc {
+  overflow: scroll;
+  height:200px;
+  overflow:hidden;
+  display:flex;
+
+  align-items: center;
+  margin-bottom:10px;
+  border-top: 1px solid hsl(0, 0%, 20%);
+  border-bottom: 1px solid hsl(0, 0%, 20%);
+}
+.card h3 {
+  font-size: 1.5rem;
+}
+.card .card-bottom {
+  display:flex;
+  justify-content: space-between;
+}
+.card .card-bottom i {
+  font-size: 30px;
+}
+
+.card .card-tech {
+  display:flex;
+  gap:20px;
+  cursor:pointer;
+}
+
+.card .card-tech p {
+  padding:5px;
+  border-radius: 5px;
+}
+.card a {
+  text-decoration: none;
+  color:white;
+  transition: 0.2s ease-in;
+}
+.card a:hover {
+  transform: scale(1.1);
+
+}
+.React {
+  color: #BAD5F5;
+  border: 1px solid #BAD5F5;
+ 
+}
+.React::after {
+  content : ".js"
+}
+.React:hover {
+  background-color: hsl(213, 75%, 65%);
+  color:black;
+
+}
+.CSS{
+  color: hsl(240, 100%, 70%);
+  border: 1px solid blue;
+}
+.CSS:hover {
+  background-color: hsl(240, 100%, 70%);
+  color:black;
+}
+.Javascript {
+  color: hsl(60, 100%, 70%);
+  border: 1px solid hsl(60, 100%, 70%);
+}
+.HTML {
+  color: hsl(0, 100%, 40%);
+  border: 1px solid  hsl(0, 100%, 40%);
+}
+.HTML:hover {
+  background-color: hsl(0, 100%, 40%);
+  color:black;
+}
+.filter-error {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 30%)
+}
+.filter-error h2 {
+  font-size:1.2rem;
+}
 
 /* Dark Mode */
 .dark {
@@ -273,7 +411,12 @@ body {
 .light .resumeA:hover {
     background-color: hsl(0, 0%, 50%);
 }
-
+@media (max-width:1639px) {
+  .projects-body .card-container {
+    justify-content: center;
+    padding:20px 80px 20px 80px;
+  }
+}
 @media (max-width: 920px) {
   .hide {
     display: none;
@@ -284,7 +427,13 @@ body {
   .navbar {
     justify-content: end;
   }
+  .projects-body .card-container {
+    justify-content: center;
+    padding:20px;
+  }
 }
+
+
 
 @media (max-width: 780px) {
   .seller {
