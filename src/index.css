@@ -278,11 +278,12 @@ body {
 .card .card-tech p {
   padding:5px;
   border-radius: 5px;
+  transition: 0.2s ease-in;
 }
 .card a {
   text-decoration: none;
   color:white;
-  transition: 0.2s ease-in;
+
 }
 .card a:hover {
   transform: scale(1.1);
@@ -312,6 +313,10 @@ body {
 .Javascript {
   color: hsl(60, 100%, 70%);
   border: 1px solid hsl(60, 100%, 70%);
+}
+.Javascript:hover {
+  background-color: hsl(60, 100%, 60%);
+  color:black;
 }
 .HTML {
   color: hsl(0, 100%, 40%);
