@@ -15,11 +15,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+.header, .navbar, .about-body, .about-card, .dot, .line, .card, .projects-body, .container-fluid, .resume {
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+}
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .navbar {
@@ -196,8 +200,8 @@ body {
     background-color: hsl(0, 0%, 10%);
 }
 .projects-body {
-  margin-top:20px;
-  height:91.5vh;
+  padding-top:20px;
+  min-height:91.5vh;
   display:flex;
   flex-direction:column;
   align-items: center;
@@ -208,6 +212,7 @@ body {
 }
 .searchbar {
   margin-top:20px;
+  margin-bottom: 20px;
   width: 80%;
   height:45px;
   border-radius: 10px;
@@ -300,7 +305,6 @@ body {
 .React:hover {
   background-color: hsl(213, 75%, 65%);
   color:black;
-
 }
 .CSS{
   color: hsl(240, 100%, 70%);
@@ -339,6 +343,98 @@ body {
   font-size:1.2rem;
 }
 
+.about-body {
+  display:flex;
+  flex-direction: column;
+  min-height:91.5vh;
+
+  align-items: center;
+  padding-top: 20px;
+}
+.about-body h1 {
+  font-size: 5em;
+}
+.about-card {
+  width: 46%;
+  height:350px;
+  border: 1px solid white;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  padding: 20px;
+  
+  border-radius: 8px;
+}
+.about-card h4 {
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+  padding: 5px;
+}
+.about-stack {
+  display:flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.where {
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+  padding-left: 10px;
+}
+.where i {
+  color: red;
+}
+.when {
+  padding-left: 10px;
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+}
+.about-stack p {
+  border: 1px solid hsl(0, 0%, 20%);;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: hsl(0, 0%, 10%);
+}
+.row {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative; /* This ensures the dot-line combo is positioned correctly */
+}
+
+.reverse {
+  display: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+
+.dot {
+  width: 6.4vw;
+  height: 300px; /* Adjust to maintain a square shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Parent of absolute positioned line */
+}
+
+.dot i {
+  z-index: 999;
+  position: absolute; /* Ensure icon is centered */
+  font-size: 1vw; /* Adjust size based on screen */
+  color: hsl(0, 0%, 80%); /* Dot color */
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color: black;
+
+}
+
+.line {
+  width: 1px;
+  height: 116.5%; /* Make the line take up the full height of the dot */
+  background-color: hsl(0, 0%, 30%);
+  position: absolute; /* Center the line inside the dot */
+  transform: translateX(-50%);
+}
+
+
 /* Dark Mode */
 .dark {
   background-color: black;
@@ -374,11 +470,52 @@ body {
 .dark .resumeA {
   color: white;
 }
+.dark .projects-body {
+  background-color: black;
+  color:white;
+  border: 1px solid hsl(0, 0%, 30%);
+  
+}
+.dark .searchbar {
+  background-color: transparent;
+  color: white;
+
+}
+
+.dark .searchbar:focus {
+  background-color: hsla(0, 0%, 10%, 0.6);
+}
+.dark .card {
+  border: 2px solid hsl(0, 0%, 20%);
+  background-color: transparent;
+  color: white;
+}
+.dark .card-desc {
+  border-top: 1px solid hsl(0, 0%, 20%);
+  border-bottom: 1px solid hsl(0, 0%, 20%);
+}
+
+.dark .card-tech p {
+  border: 1px solid hsl(0, 0%, 20%);
+}
+.dark .about-body {
+  background-color: white;
+}
 
 /* Light Mode */
 .light {
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 95%);
   color: black;
+}
+.light .dot i {
+  background-color: hsl(0, 0%, 95%);
+  color:black;
+}
+.light .about-card {
+  border: 1px solid black;
+}
+.light .about-card .about-stack p {
+  background-color: hsl(0, 0%, 95%);
 }
 
 .light .header .name-surname {
@@ -416,11 +553,57 @@ body {
 .light .resumeA:hover {
     background-color: hsl(0, 0%, 50%);
 }
+
+.light .searchbar {
+  background-color: transparent;
+  color: black;
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+.light .searchbar:focus {
+  background-color: hsla(0, 0%, 90%, 0.6);
+}
+.light .card {
+  border: 2px solid hsl(0, 0%, 70%);
+  background-color: white;
+  color: black;
+}
+.light .card-desc {
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-bottom: 1px solid hsl(0, 0%, 70%);
+}
+
+.light .card-tech p {
+  border: 1px solid hsl(0, 0%, 70%);
+}
+.light .React {
+  color: hsl(213, 75%, 35%);
+}
+.React:hover {
+  background-color: hsl(213, 75%, 65%);
+  color:black;
+}
 @media (max-width:1639px) {
   .projects-body .card-container {
     justify-content: center;
     padding:20px 80px 20px 80px;
   }
+ 
+}
+@media (max-width : 1250px) {
+  .about-card {
+    width: 100%;
+
+  }
+  .about-container {
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .dot {
+    display:none;
+  }
+  
 }
 @media (max-width: 920px) {
   .hide {

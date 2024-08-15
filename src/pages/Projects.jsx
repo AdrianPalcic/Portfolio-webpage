@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
     function Projects({ theme, func }) {
 
+        const placeholder = "Search Projects"
 
         const data = [
             {
@@ -82,7 +83,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
                     </div>
                     <div className="card-bottom">
                         <p>{project.when}</p>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             ));
@@ -103,9 +104,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
         return (
-            <div className="projects-body">
+            <div className={`projects-body ${theme ? "dark" : "light"}`}>
             <h1>Projects</h1>
-            <SearchBar filter={filterWithSearchBar}/>
+            <SearchBar filter={filterWithSearchBar} holder={placeholder}/>
             <div className="card-container">
                 {showProjects(filteredProjects)}
             </div>

@@ -1,8 +1,8 @@
 
-    function SearchBar ({filter}) {
+    function SearchBar ({filter, holder}) {
         return (
             <>
-          <input type="text" className="projects searchbar" placeholder="Search projects" onChange={filter}></input>
+          <input type="text" className="projects searchbar" placeholder={holder} onChange={filter}></input>
                         
         </>
         );
